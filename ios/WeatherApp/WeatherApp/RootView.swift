@@ -7,11 +7,13 @@
 import SwiftUI
 
 struct RootView: View {
-    var body: some View {
-        NavigationStack {
-            HomeView()
-        }
-    }
+    var body: some View {
+        TabView {
+            HomeView()
+                .tabItem { Label("Today", systemImage: "sun.max.fill") }
+
+            FavoritesView()
+                .tabItem { Label("Favorites", systemImage: "star.fill") }
+        }
+    }
 }
-
-

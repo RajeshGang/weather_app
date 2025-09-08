@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		87B260D12E6EB3E400761558 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 87B260D02E6EB3E400761558 /* FirebaseAuth */; };
+		87B260D32E6EB3E400761558 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 87B260D22E6EB3E400761558 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		87B260962E6E80A100761558 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B260D12E6EB3E400761558 /* FirebaseAuth in Frameworks */,
+				87B260D32E6EB3E400761558 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,7 @@
 				87B260872E6E80A000761558 /* WeatherApp */,
 				87B260982E6E80A100761558 /* WeatherAppTests */,
 				87B260A22E6E80A100761558 /* WeatherAppUITests */,
+				87B260D42E6EB7DD00761558 /* Frameworks */,
 				87B260862E6E80A000761558 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +98,13 @@
 				87B2609F2E6E80A100761558 /* WeatherAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		87B260D42E6EB7DD00761558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +127,8 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
+				87B260D02E6EB3E400761558 /* FirebaseAuth */,
+				87B260D22E6EB3E400761558 /* FirebaseFirestore */,
 			);
 			productName = WeatherApp;
 			productReference = 87B260852E6E80A000761558 /* WeatherApp.app */;
@@ -195,6 +212,9 @@
 			);
 			mainGroup = 87B2607C2E6E80A000761558;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				87B260CF2E6EB3E400761558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 87B260862E6E80A000761558 /* Products */;
 			projectDirPath = "";
@@ -396,8 +416,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QYJZBWL6KK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Needed to show local weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,8 +446,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QYJZBWL6KK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Needed to show local weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +576,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		87B260CF2E6EB3E400761558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87B260D02E6EB3E400761558 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87B260CF2E6EB3E400761558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		87B260D22E6EB3E400761558 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87B260CF2E6EB3E400761558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87B2607D2E6E80A000761558 /* Project object */;
 }
